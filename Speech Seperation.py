@@ -88,7 +88,8 @@ plt.subplots_adjust(hspace=.5)
 for i in range(len(mfccFeatures)):
     plt.subplot(len(mfccFeatures), 1, i + 1)
     plt.title('Segment: %d' % i)
-    img = plt.imshow(mfccFeatures[i], aspect='auto', origin='lower', vmin=0, vmax=sample_max, cmap=plt.cm.Yl)
+    img = plt.imshow(mfccFeatures[i], aspect='auto', origin='lower', vmin=0, vmax=sample_max)
+    plt.colorbar()
 
 #fig.colorbar(img)
 plt.show()
